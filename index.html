@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8dcd5">
+<title>A Little Surprise for Divya 💗</title>
+<style>
+:root{--peach:#f8ddd4;--pink:#e9aeb5;--rose:#a85d70;--ink:#67434b;--cream:#fff9f5;--gold:#d5a85e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}button,input{font:inherit}
+button{border:0;border-radius:999px;padding:13px 22px;background:var(--rose);color:white;cursor:pointer;box-shadow:0 8px 20px #a85d7025;transition:.2s}button:hover{transform:translateY(-2px);filter:brightness(1.05)}
+section{padding:72px 20px;max-width:940px;margin:auto;text-align:center}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font:11px Arial,sans-serif;color:#b77b83}.headline{font-size:clamp(2.3rem,7vw,4.7rem);font-weight:normal;line-height:1.08;margin:12px 0;color:#96596a}.sub{font-size:1.1rem;line-height:1.8;max-width:680px;margin:18px auto;color:#805e62}
+#cinematic{position:fixed;inset:0;z-index:50;display:grid;place-items:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 45%,#fff8f2 0,#f8dcd5 42%,#d99eaa 100%);transition:opacity 1.2s,visibility 1.2s;overflow:hidden}
+#cinematic.hide{opacity:0;visibility:hidden;pointer-events:none}.cinema-content{max-width:700px;position:relative;z-index:2}.cinema-kicker{font:11px Arial,sans-serif;letter-spacing:.35em;text-transform:uppercase;color:#a66b78;opacity:0;animation:rise 1.2s .4s forwards}.cinema-title{font-size:clamp(3rem,11vw,6.8rem);font-weight:normal;line-height:1.02;color:#925669;margin:22px 0;opacity:0;animation:rise 1.4s 1s forwards}.cinema-line{font-size:clamp(1rem,3vw,1.3rem);line-height:1.8;opacity:0;animation:rise 1.3s 2s forwards}.cinema-button{margin-top:28px;background:#fff9f5;color:#9c5e70;opacity:0;animation:rise 1s 2.8s forwards}.cinema-flower{position:absolute;color:#fff9;font-size:clamp(50px,12vw,130px);animation:drift 9s ease-in-out infinite}.f1{top:8%;left:8%}.f2{right:9%;bottom:9%;animation-delay:-3s}.f3{right:15%;top:12%;font-size:55px;animation-delay:-5s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes drift{50%{transform:translateY(-22px) rotate(18deg)}}
+#lock{min-height:100svh;display:grid;place-items:center;padding:24px;background:linear-gradient(140deg,#f8ddd4,#f3c6c8 55%,#fbe9df)}
+.lock-card{width:min(100%,440px);padding:36px 26px;text-align:center;background:#fffaf6e8;border:1px solid white;border-radius:28px;box-shadow:0 24px 70px #9b65701e}.gift{font-size:54px;animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px)}}
+.pin{display:flex;gap:9px;justify-content:center;margin:22px 0}.pin input{width:52px;height:58px;border:1px solid #e8c4c4;border-radius:14px;background:white;text-align:center;font-size:24px;color:var(--rose);outline:none}.hint{font:13px Arial,sans-serif;color:#9d7b7e}.error{min-height:20px;color:#b84d5d;font:13px Arial,sans-serif}
+#surprise{display:none}.hero{min-height:82svh;display:grid;place-items:center;background:linear-gradient(#fff4eeaa,#f9dedacc),radial-gradient(ellipse at 50% 80%,#e8aeb8,#fae3d8 65%);position:relative;overflow:hidden;padding:35px 20px}.hero:before,.hero:after{content:"✿";position:absolute;color:#fff8;font-size:150px}.hero:before{left:4%;top:8%}.hero:after{right:4%;bottom:8%}.hero-inner{max-width:750px;position:relative;z-index:1}.hero .headline{font-size:clamp(3rem,10vw,6rem)}.hero p{font-size:1.18rem;line-height:1.7}.scroll{margin-top:25px;background:#fff9f5;color:var(--rose)}
+.panel{background:white;border:1px solid #f2dfd9;border-radius:26px;padding:28px;box-shadow:0 12px 35px #875d6010}.upload{display:inline-block;margin:12px 0;padding:10px 16px;border:1px dashed #d6a5a9;border-radius:14px;font:13px Arial,sans-serif;color:#9b6470;cursor:pointer}.upload input{display:none}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:18px;margin-top:25px}.polaroid{background:white;padding:10px 10px 18px;box-shadow:0 8px 22px #68434b1b;transform:rotate(var(--r))}.polaroid img{width:100%;aspect-ratio:1;object-fit:cover;background:#f5e3df}.polaroid small{display:block;margin-top:10px;font-style:italic}
+.letter{background:#fff8e9;border:1px solid #ead9b9;padding:28px;text-align:left;line-height:1.9;font-size:1.04rem;border-radius:5px;box-shadow:0 12px 28px #6c514010;max-width:680px;margin:25px auto;white-space:pre-line}
+.cake{font-size:100px;cursor:pointer;display:inline-block;transition:.3s;filter:drop-shadow(0 10px 8px #a85d7025)}.cake.cut{transform:rotate(-10deg) scale(1.12)}
+.wishcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:24px}.wish{height:130px;perspective:700px;cursor:pointer}.wish-inner{height:100%;position:relative;transform-style:preserve-3d;transition:.6s}.wish.flipped .wish-inner{transform:rotateY(180deg)}.face{position:absolute;inset:0;display:grid;place-items:center;padding:12px;border-radius:18px;backface-visibility:hidden;background:#f6dfe0;color:#985d6c}.back{transform:rotateY(180deg);background:#fff1e7;line-height:1.5}
+.candle-wrap{display:inline-grid;place-items:center;min-width:220px;min-height:180px}.candle{font-size:88px;cursor:pointer;display:inline-block;transition:.3s;filter:drop-shadow(0 8px 8px #a85d7020)}.candle.off{filter:grayscale(.6);transform:scale(.95)}.game-hint{font:13px Arial,sans-serif;color:#9d7b7e}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:580px;margin:28px auto}.timebox{background:#fff;border:1px solid #f0d9d8;border-radius:18px;padding:17px 8px;box-shadow:0 8px 20px #a85d700c}.timebox strong{display:block;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:normal;color:#9d5e70}.timebox span{font:10px Arial,sans-serif;letter-spacing:.12em;color:#a98184;text-transform:uppercase}
+.media-panel{max-width:620px;margin:22px auto;text-align:left}.media-panel label{display:block;font:12px Arial,sans-serif;color:#9a6871;margin:14px 0 6px}.media-panel input[type=url],.media-panel input[type=date]{width:100%;border:1px solid #ebd3d1;border-radius:12px;padding:12px;background:#fffaf8;color:#67434b}.media-panel audio{width:100%;margin-top:12px}.spotify-frame{width:100%;height:152px;border:0;border-radius:14px;margin-top:14px}.media-note{font:12px/1.6 Arial,sans-serif;color:#9b8182}
+footer{text-align:center;padding:40px 20px;color:#ad8589;font:12px Arial,sans-serif}
+#confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:60}.piece{position:absolute;top:-20px;width:9px;height:14px;animation:fall 2.8s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+@media(max-width:520px){section{padding:55px 16px}.lock-card{padding:28px 18px}.pin{gap:6px}.pin input{width:46px;height:54px}.countdown{gap:6px}.timebox{padding:13px 3px}}
+</style>
+</head>
+<body>
+<div id="cinematic">
+  <span class="cinema-flower f1">✿</span><span class="cinema-flower f2">❀</span><span class="cinema-flower f3">♡</span>
+  <div class="cinema-content">
+    <div class="cinema-kicker">A little moment made just for you</div>
+    <h1 class="cinema-title">Some surprises<br>are wrapped in love.</h1>
+    <p class="cinema-line">And this one has your name written all over it, Divya. 💗</p>
+    <button class="cinema-button" onclick="enterGift()">Unwrap your surprise ✨</button>
+  </div>
+</div>
+
+<div id="lock">
+  <div class="lock-card">
+    <div class="gift">🎁</div><div class="eyebrow">A little surprise awaits</div>
+    <h1 class="headline" style="font-size:2.5rem">For Divya 💗</h1>
+    <p class="sub" style="font-size:1rem">Someone made something special just for you.<br>But first, unlock your gift.</p>
+    <div class="pin" aria-label="Enter four digit PIN">
+      <input inputmode="numeric" maxlength="1" aria-label="PIN digit 1"><input inputmode="numeric" maxlength="1" aria-label="PIN digit 2"><input inputmode="numeric" maxlength="1" aria-label="PIN digit 3"><input inputmode="numeric" maxlength="1" aria-label="PIN digit 4">
+    </div>
+    <div class="hint">Hint: A special four-digit number 💌</div><div class="error" id="error"></div>
+    <button onclick="unlock()">Unlock my surprise ✨</button>
+    <p class="hint" style="margin-top:20px">Made with love, only for you.</p>
+  </div>
+</div>
+
+<div id="surprise">
+<header class="hero"><div class="hero-inner">
+  <div class="eyebrow">A day made a little more special</div><h1 class="headline">Happy Birthday,<br>Divya! 💗</h1>
+  <p>To someone who makes ordinary days feel a little more beautiful.<br>Today, this tiny corner of the internet is all yours.</p>
+  <button class="scroll" onclick="document.querySelector('#memories').scrollIntoView({behavior:'smooth'})">Open your little surprise ↓</button>
+</div></header>
+
+<section id="countdown">
+  <div class="eyebrow">The special day</div><h2 class="headline">Counting down to you 🎂</h2>
+  <p class="sub" id="countdownMessage">Every second brings us closer to your special day.</p>
+  <div class="countdown">
+    <div class="timebox"><strong id="days">--</strong><span>Days</span></div><div class="timebox"><strong id="hours">--</strong><span>Hours</span></div><div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div><div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+  </div>
+  <div class="panel media-panel">
+    <label for="birthdayDate">Set her birthday date</label><input id="birthdayDate" type="date">
+    <p class="media-note">Choose the date here. The countdown updates automatically. The selected date is saved only in this browser; for the public website, also set BIRTHDAY_DATE in the script below.</p>
+  </div>
+</section>
+
+<section id="music">
+  <div class="eyebrow">A song that reminds me of you</div><h2 class="headline">Press play, think of us 🎶</h2>
+  <p class="sub">Add a Spotify song link and it will appear here as a player.</p>
+  <div class="panel media-panel">
+    <label for="spotifyLink">Paste Spotify song link</label><input id="spotifyLink" type="url" placeholder="https://open.spotify.com/track/...">
+    <button style="margin-top:12px" onclick="loadSpotify()">Add my song ♫</button>
+    <div id="spotifyArea"></div>
+    <p class="media-note">Spotify may ask the listener to sign in. Music playback is controlled by Spotify and may depend on the listener's account and region.</p>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="eyebrow">A message in my own voice</div><h2 class="headline">A little voice note 🎙️</h2>
+  <p class="sub">Record a message on your phone, then add the audio file here.</p>
+  <div class="panel media-panel">
+    <label for="voiceFile">Choose your recorded voice note (MP3, M4A or WAV)</label><input id="voiceFile" type="file" accept="audio/*">
+    <audio id="voicePlayer" controls hidden></audio>
+    <p class="media-note">For Divya to hear it on the published website, upload the audio file (for example, <b>divya-voice-note.mp3</b>) alongside the HTML file and set VOICE_NOTE_FILE in the script to that filename. Choosing a file here previews it only on your device.</p>
+  </div>
+</section>
+
+<section id="memories">
+  <div class="eyebrow">Little moments, big memories</div><h2 class="headline">Our memories 📸</h2>
+  <p class="sub">Add your favourite photos in the website folder before publishing.</p>
+  <label class="upload">＋ Preview photos from your device<input id="photos" type="file" accept="image/*" multiple></label>
+  <div class="gallery" id="gallery">
+    <div class="polaroid" style="--r:-3deg"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=500" alt="Memory placeholder"><small>A moment to remember ♡</small></div>
+    <div class="polaroid" style="--r:2deg"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500" alt="Memory placeholder"><small>Good times, always ♡</small></div>
+    <div class="polaroid" style="--r:-1deg"><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500" alt="Memory placeholder"><small>One for the memories ♡</small></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">A little something from the heart</div><h2 class="headline">A letter for you 💌</h2>
+  <div class="letter">शेवटी एवढंच सांगायचं आहे की, तू माझ्यासाठी खूप खास आहेस. ❤️
+
+तुझ्या चेहऱ्यावरचं हसू असंच कायम राहो, तुझी प्रत्येक इच्छा पूर्ण होवो आणि आयुष्यात तुला हवं ते सगळं मिळो. कधी कितीही कठीण वेळ आली तरी स्वतःवरचा विश्वास कधीच कमी करू नकोस.
+
+तुझ्या आयुष्यात आनंदाचे, प्रेमाचे आणि सुंदर आठवणींचे असंख्य क्षण येवोत. तू अशीच हसत राहा, आनंदी राहा आणि स्वतःसारखीच सुंदर राहा.
+
+आणि हो, आपल्या आयुष्यात कितीही बदल झाले तरी काही माणसं नेहमीच खास राहतात... तू त्यापैकीच एक आहेस. 🥹❤️
+
+वाढदिवसाच्या खूप खूप शुभेच्छा! खूप सारा जीव तुझ्यावर! ❤️🎂</div>
+</section>
+
+<section>
+  <div class="eyebrow">Make a wish</div><h2 class="headline">Your birthday cake 🎂</h2><p class="sub">Tap the cake to cut it and celebrate!</p>
+  <div class="cake" id="cake" onclick="cutCake()">🎂</div><br><button onclick="cutCake()">Cut the cake ✨</button><p id="cakeMessage" class="sub" aria-live="polite"></p>
+</section>
+
+<section>
+  <div class="eyebrow">A few wishes, just for you</div><h2 class="headline">Open your little wishes 🌷</h2><p class="sub">Tap each card to reveal a wish.</p>
+  <div class="wishcards">
+    <div class="wish" onclick="this.classList.toggle('flipped')"><div class="wish-inner"><div class="face">Wish 01 ✨</div><div class="face back">Is baar Paper ache jaye</div></div></div>
+    <div class="wish" onclick="this.classList.toggle('flipped')"><div class="wish-inner"><div class="face">Wish 02 💗</div><div class="face back">8 ka cgpa aaye zyada tension nahi lena</div></div></div>
+    <div class="wish" onclick="this.classList.toggle('flipped')"><div class="wish-inner"><div class="face">Wish 03 🌸</div><div class="face back">May life surprise you beautifully. </div></div></div>
+    <div class="wish" onclick="this.classList.toggle('flipped')"><div class="wish-inner"><div class="face">Wish 04 🦋</div><div class="face back">toto poco coco bohot pyar kare</div></div></div>
+    <div class="wish" onclick="this.classList.toggle('flipped')"><div class="wish-inner"><div class="face">Wish 05 🎀</div><div class="face back">May courage always walk beside you.</div></div></div>
+    <div class="wish" onclick="this.classList.toggle('flipped')"><div class="wish-inner"><div class="face">Wish 06 💫</div><div class="face back">I hope This birthday you will remain as a beautiful memory</div></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">The candle wish game</div><h2 class="headline">Make a wish, Divya 🕯️</h2>
+  <p class="sub">Take a deep breath, make a wish, then blow towards your microphone to put out the candle — or tap it if your device doesn't support microphone access.</p>
+  <div class="candle-wrap"><div class="candle" id="candle" role="button" tabindex="0" aria-label="Blow out the candle" onclick="blowCandle()">🕯️</div></div>
+  <div><button id="micButton" onclick="startBlowGame()">Enable blow-out game 🎤</button> <button onclick="blowCandle()">Tap to blow it out</button></div>
+  <p class="game-hint" id="gameStatus">Microphone access is optional. Your audio is analysed in your browser and is not recorded or uploaded.</p>
+  <p id="wishMessage" class="sub" aria-live="polite"></p>
+</section>
+
+<section><div class="panel"><div class="eyebrow">Until the next beautiful memory</div><h2 class="headline" style="font-size:2.7rem">You are one of a kind. ❤️</h2><p class="sub">Thank you for being you. Keep smiling, keep shining, and never forget how special you are.</p><div style="font-size:28px">🎀 🌷 💗 🌷 🎀</div></div></section>
+<footer>Made with love, just for Divya · Happy Birthday 💗</footer>
+</div>
+<div id="confetti"></div>
+
+<script>
+// PERSONALISE THESE SETTINGS BEFORE PUBLISHING:
+const SECRET_PIN = "0311";                 // Change to your chosen 4-digit PIN.
+const BIRTHDAY_DATE = "2026-11-03";        // CHANGE to Divya's birthday: YYYY-MM-DD.
+const SPOTIFY_LINK = "https://open.spotify.com/track/6GK02ZOmn7hzEOWVc4YfwC?si=d32vWzakTRC_RBoQhIy17Q&utm_source=copy-link";                  // Optional: paste Spotify track URL between quotes.
+const VOICE_NOTE_FILE = "divya-voice-note.mp3"; // Put this audio file beside the HTML file.
+const PHOTO_FILES = [  
+  "photo.jpg",
+  "photo1.jpg",
+  "photo2.jpg",
+  "photo3.jpg",
+  "photo4.jpg",
+  "photo5.jpg",
+  "photo6.jpg",
+  "photo7.jpg",
+  "photo8.jpg",
+  "photo9.jpg",
+  "photo10.jpg",
+  "photo11.png",
+  "photo12.jpg"
+];                  // Example: ["photo1.jpg","photo2.jpg","photo3.jpg"]
+
+let micStream=null,audioContext=null,analyser=null,micAnimation=null,blown=false;
+const fields=[...document.querySelectorAll('.pin input')];
+fields.forEach((field,i)=>{field.addEventListener('input',()=>{field.value=field.value.replace(/\D/g,'').slice(0,1);if(field.value&&fields[i+1])fields[i+1].focus()});field.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!field.value&&fields[i-1])fields[i-1].focus();if(e.key==='Enter')unlock()})});
+
+function enterGift(){document.getElementById('cinematic').classList.add('hide');}
+function unlock(){const pin=fields.map(x=>x.value).join('');if(pin===SECRET_PIN){document.getElementById('lock').style.display='none';document.getElementById('surprise').style.display='block';window.scrollTo(0,0);celebrate();initCountdown();loadConfiguredMedia();}else{document.getElementById('error').textContent='Not quite! Try the special number again 💗';fields.forEach(x=>x.value='');fields[0].focus()}}
+function celebrate(){const box=document.getElementById('confetti');for(let i=0;i<85;i++){const p=document.createElement('i');p.className='piece';p.style.left=Math.random()*100+'%';p.style.background=['#e9aeb5','#d5a85e','#f4c9a7','#b88aa0','#f7e7a7'][i%5];p.style.animationDelay=Math.random()*.8+'s';p.style.transform=`rotate(${Math.random()*360}deg)`;box.appendChild(p);setTimeout(()=>p.remove(),3500)}}
+
+function getNextBirthday(dateString){if(!dateString)return null;const parts=dateString.split('-').map(Number);if(parts.length!==3||!parts.every(Number.isFinite))return null;const now=new Date();let target=new Date(now.getFullYear(),parts[1]-1,parts[2],0,0,0);if(target<new Date(now.getFullYear(),now.getMonth(),now.getDate()))target=new Date(now.getFullYear()+1,parts[1]-1,parts[2],0,0,0);return target}
+function updateCountdown(){const input=document.getElementById('birthdayDate');const dateString=input.value||BIRTHDAY_DATE;const target=getNextBirthday(dateString);if(!target){document.getElementById('countdownMessage').textContent='Set the birthday date to start the countdown.';return}const diff=target-Date.now();if(diff<=0){document.getElementById('countdownMessage').textContent='Today is your special day! Happy Birthday, Divya! 🎂💗';['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='00');return}const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById('days').textContent=d;document.getElementById('hours').textContent=String(h).padStart(2,'0');document.getElementById('minutes').textContent=String(m).padStart(2,'0');document.getElementById('seconds').textContent=String(s).padStart(2,'0');document.getElementById('countdownMessage').textContent='Counting every little moment until your day arrives. 💗'}
+function initCountdown(){const dateInput=document.getElementById('birthdayDate');dateInput.value=BIRTHDAY_DATE;dateInput.addEventListener('change',updateCountdown);updateCountdown();setInterval(updateCountdown,1000)}
+function spotifyEmbedUrl(raw){try{const u=new URL(raw);if(!['open.spotify.com','www.open.spotify.com'].includes(u.hostname))return null;const match=u.pathname.match(/^\/(track|album|playlist|episode|show)\/([A-Za-z0-9]+)$/);return match?`https://open.spotify.com/embed/${match[1]}/${match[2]}?utm_source=generator`:null}catch{return null}}
+function loadSpotify(){const raw=document.getElementById('spotifyLink').value.trim();const url=spotifyEmbedUrl(raw);const area=document.getElementById('spotifyArea');area.innerHTML='';if(!url){area.textContent='Please paste a valid Spotify track, album or playlist link.';return}const frame=document.createElement('iframe');frame.className='spotify-frame';frame.src=url;frame.allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';frame.loading='lazy';frame.title='Spotify music player';area.append(frame)}
+function loadConfiguredMedia(){if(SPOTIFY_LINK){document.getElementById('spotifyLink').value=SPOTIFY_LINK;loadSpotify()}if(VOICE_NOTE_FILE){const player=document.getElementById('voicePlayer');player.src=VOICE_NOTE_FILE;player.hidden=false}if(PHOTO_FILES.length){const gallery=document.getElementById('gallery');gallery.innerHTML='';PHOTO_FILES.forEach((file,i)=>{const card=document.createElement('div');card.className='polaroid';card.style.setProperty('--r',(i%2?2:-2)+'deg');const img=document.createElement('img');img.src=file;img.alt='Birthday memory';const caption=document.createElement('small');caption.textContent='A favourite memory ♡';card.append(img,caption);gallery.append(card)})}}
+document.getElementById('voiceFile').addEventListener('change',e=>{const file=e.target.files[0];if(file){const player=document.getElementById('voicePlayer');player.src=URL.createObjectURL(file);player.hidden=false}});
+document.getElementById('photos').addEventListener('change',e=>{const gallery=document.getElementById('gallery');gallery.innerHTML='';[...e.target.files].slice(0,12).forEach((file,i)=>{const card=document.createElement('div');card.className='polaroid';card.style.setProperty('--r',(i%2?2:-2)+'deg');const img=document.createElement('img');img.src=URL.createObjectURL(file);img.alt='Uploaded memory';const caption=document.createElement('small');caption.textContent='A favourite memory ♡';card.append(img,caption);gallery.append(card)})});
+function cutCake(){document.getElementById('cake').classList.add('cut');document.getElementById('cakeMessage').textContent='Yay! 🎉 May all your sweetest wishes come true!';celebrate()}
+function blowCandle(){if(blown)return;blown=true;document.getElementById('candle').textContent='🌟';document.getElementById('candle').classList.add('off');document.getElementById('wishMessage').textContent='You did it! Your wish is on its way to the universe. ✨';document.getElementById('gameStatus').textContent='The candle is out! Happy birthday, Divya! 💗';stopMic();celebrate()}
+document.getElementById('candle').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();blowCandle()}});
+async function startBlowGame(){if(blown)return;const status=document.getElementById('gameStatus');if(!navigator.mediaDevices?.getUserMedia){status.textContent='Microphone is not available here. Use the tap-to-blow button instead.';return}try{micStream=await navigator.mediaDevices.getUserMedia({audio:true});const AudioCtx=window.AudioContext||window.webkitAudioContext;audioContext=new AudioCtx();const source=audioContext.createMediaStreamSource(micStream);analyser=audioContext.createAnalyser();analyser.fftSize=512;source.connect(analyser);const data=new Uint8Array(analyser.fftSize);status.textContent='Microphone on! Blow gently towards your microphone. 💨';let loudFrames=0;const check=()=>{if(!analyser||blown)return;analyser.getByteTimeDomainData(data);let sum=0;for(let i=0;i<data.length;i++){const v=(data[i]-128)/128;sum+=v*v}const rms=Math.sqrt(sum/data.length);if(rms>0.17)loudFrames++;else loudFrames=Math.max(0,loudFrames-1);if(loudFrames>5){blowCandle();return}micAnimation=requestAnimationFrame(check)};check()}catch(err){status.textContent='Microphone permission was not granted. You can still tap the candle to blow it out.'}}
+function stopMic(){if(micAnimation)cancelAnimationFrame(micAnimation);if(micStream)micStream.getTracks().forEach(t=>t.stop());if(audioContext&&audioContext.state!=='closed')audioContext.close();micStream=null;analyser=null}
+</script>
+</body>
+</html>
